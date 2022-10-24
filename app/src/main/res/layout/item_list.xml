@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF"
+    android:paddingStart="4dp"
+    android:paddingTop="2dp"
+    android:paddingEnd="4dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/purple_700"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btDel"
+        app:layout_constraintEnd_toStartOf="@+id/btDel"
+        app:layout_constraintLeft_creator="@integer/material_motion_duration_long_1"
+        app:layout_constraintTop_toTopOf="@+id/btDel"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <TextView
+        android:id="@+id/tv_listData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:text="22.10.2022г."
+        android:textColor="@color/design_default_color_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Rashod"
+        android:textColor="@color/design_default_color_secondary"
+        app:layout_constraintEnd_toEndOf="@+id/tv_listRasMoney"
+        app:layout_constraintStart_toStartOf="@+id/tv_listRasCounter"
+        app:layout_constraintTop_toTopOf="@+id/tv_listData" />
+
+    <TextView
+        android:id="@+id/tv_list_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000000"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_listData"
+        app:layout_constraintTop_toBottomOf="@+id/tv_listData" />
+
+    <TextView
+        android:id="@+id/tv_listRasCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="273"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btEdit"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/tv_listData"
+        app:layout_constraintTop_toTopOf="@+id/tv_list_counter" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text=" * "
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/tv_listRasCounter"
+        app:layout_constraintTop_toTopOf="@+id/tv_listRasCounter" />
+
+    <TextView
+        android:id="@+id/tv_listTarif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1,3р."
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/tv"
+        app:layout_constraintTop_toTopOf="@+id/tv_listRasCounter" />
+
+    <TextView
+        android:id="@+id/tv_listRasMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="300р."
+        android:textColor="@color/gold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_listTarif"
+        app:layout_constraintStart_toStartOf="@+id/tv_listRasCounter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_listRasCounter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

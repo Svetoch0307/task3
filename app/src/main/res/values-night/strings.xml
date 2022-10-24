@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Add_new_counter">Добавит новые показания</string>
+    <string name="Prev_counter">Преведущие показания</string>
+    <string name="New_counter">Введите новые показания</string>
+    <string name="New_tarif">Введите тариф</string>
+    <string name="Rashod">Расход:</string>
+    <string name="Rub">Руб.</string>
+    <string name="Save">Сохранить</string>
+    <string name="Cancel">Отмена</string>
+    <string name="Eror_test">Новые показания должны быть больше преведущих</string>
+    <string name="Ok">Ок</string>
+</resources>
