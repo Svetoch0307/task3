@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     fun SaveAdd(counterInt: Int,tarifFloat: Float) {
         val ListReversed = ArrayList<ListItem>()
-        val rashodC = if (List.size > 0) {counterInt - List[List.size-1].counterInt
+        val rashodC = if (List.size > 0) {counterInt - List[0].counterInt
         }else 0
         val rashodM = rashodC * tarifFloat
 
