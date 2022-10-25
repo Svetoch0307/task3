@@ -1,8 +1,10 @@
 package com.gwsilver.reading_counter
 
 
+import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         MAIN = this
         BindingA = ActivityMainBinding.inflate(layoutInflater)
         BindingL = FragmentListBinding.inflate(layoutInflater)
